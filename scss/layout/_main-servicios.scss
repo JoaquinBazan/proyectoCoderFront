@@ -1,0 +1,43 @@
+.containerServicio{
+    background-image: url(../assets/img/fondoServicios.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    width: 100%;
+    height: 100%;
+    @include grid (center,center,repeat(10,1fr),repeat(8,1fr));
+    h1{
+        @include flex (row,center,center);
+        font-family: $typo-principal;
+        grid-column: 4 / 8;
+        grid-row: 1 / 2;
+        background-color: $color-azul;
+        color: white;
+    }
+    div{
+        width: 400px;
+        height: 300px;
+        @include flex (column,center,center);
+        h3{
+            font-family: $typo-principal;;
+        }
+    }
+    .traslaServicio{
+        background-color: $color-azul;
+        color: white;
+        grid-column: 3 / 5;
+        grid-row: 2 / 4;
+    }
+    .eventServicio{
+        background-color: $color-verde;
+        color: white;
+        grid-column: 6 / 9;
+        grid-row: 4 / 6;
+    }
+    .enfermeServicio{
+        background-color: $color-azul;
+        color: white;
+        grid-column: 3 / 5;
+        grid-row: 6 / 8;
+    }
+}

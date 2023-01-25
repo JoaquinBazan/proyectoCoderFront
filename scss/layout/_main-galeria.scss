@@ -1,0 +1,53 @@
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerGaleria{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(3,300px);
+    grid-template-areas: 
+    "foto1 foto2 foto6"
+    "foto3 foto2 foto6"
+    "foto4 foto4 foto6"
+    ;
+    justify-content: center;
+    align-content: center;
+    gap: 20px 10px;
+}
+.imag1{
+        background-image: url("../assets/img/fotoGaleria1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-area: foto1;
+}
+.imag2{
+        @extend .imag1;
+        background-image: url("../assets/img/fotoGaleria1.jpg");
+        grid-area: foto2;
+}
+.imag3{
+        @extend .imag1;
+        background-image: url("../assets/img/fotoGaleria3.jpg");
+        grid-area: foto3;
+    }
+.imag4{
+        @extend .imag1;
+        background-image: url("../assets/img/fotoGaleria4.jpg");
+        grid-area: foto4;
+    }
+.imag5{
+        @extend .imag1;
+        background-image: url("../assets/img/fotoGaleria5.jpg");
+        grid-area: foto5;
+    }
+.imag6{
+        @extend .imag1;
+        background-image: url("../assets/img/fotoGaleria6.jpg");
+        grid-area: foto6;
+    }
+

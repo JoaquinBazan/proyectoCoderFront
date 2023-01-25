@@ -1,0 +1,85 @@
+@media (max-width: 480px) {
+    .containerHeader{
+        display:flex;
+        height: auto;
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-template-areas: none;
+    }
+    .navBar{
+        flex-direction: column;
+    }
+    .containerFooter{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        "footer3"
+        "footer6"
+        "footer4"
+        "footer5"
+        ;
+    }
+    .itemFooter1{
+        display: none;
+    }
+    .itemFooter2{
+        display: none;
+    }
+    .mainIndex{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+    .fondoIndex{
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .cajasIndex{
+        flex-direction: column;
+        div{
+            width: auto;
+            height: auto;
+        }
+    }
+    .containerNosotros{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        .textoNosotros{
+            width: auto;
+        }
+        .imagenNosotros{
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .containerServicio{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        div{
+            width: auto;
+            height: auto;
+        }
+    }
+    .containerGaleria{
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(6,300px);
+        grid-template-areas: 
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6"
+        ;
+        margin-bottom: 20px;
+    }
+
+
+}

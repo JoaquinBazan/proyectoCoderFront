@@ -1,0 +1,36 @@
+.containerFooter {
+	background-color: rgba(90, 207, 90, 0.544);
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: "footer1  footer3  footer4" "footer2  footer6  footer5";
+	justify-items: center;
+	align-items: center;
+}
+.itemFooter1 {
+	display: flex;
+	grid-area: footer1;
+}
+.itemFooter2 {
+	display: flex;
+	grid-area: footer2;
+}
+.itemFooter3 {
+	display: flex;
+	grid-area: footer3;
+}
+.itemFooter4 {
+	display: flex;
+	grid-area: footer4;
+}
+.itemFooter5 {
+	display: flex;
+	grid-area: footer5;
+	gap: 10px;
+}
+.itemFooter6 {
+	display: flex;
+	grid-area: footer6;
+}
