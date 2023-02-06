@@ -10,10 +10,34 @@
 		grid-template-areas: "icono1 . navBar";
 		height: 100%;
 	}
+	.mainIndex{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cajasIndex{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: none;
+        grid-template-rows: none;
+		width: 40%;
+		div{
+			width: auto;
+        	height: auto;
+		}
+	}
 	.containerNosotros {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
 		margin: 10px;
+		.imagenNosotros{
+			width: 400px;
+			height: 400px;
+		}
 	}
 	.containerServicio{
 		grid-template-columns: repeat(5,1fr);
@@ -25,6 +49,7 @@
 		div{
 			width: auto;
 			height: auto;
+			margin: 5px;
 		}
 		.traslaServicio{
 			grid-column: 1 / 3;
@@ -40,11 +65,26 @@
 		}
 	}
 	.containerGaleria{
-		grid-template-columns: repeat(2,300px);
+		grid-template-columns: repeat(2,200px);
     	grid-template-rows: repeat(3,300px);
 		grid-template-areas: 
     	"foto1 foto2"
     	"foto3 foto4"
     	"foto5 foto6"
 	}
+	.containerContacto{
+        flex-direction: column;
+		.contenedorDatos{
+            width: 70%;
+			form{
+				padding: 0;
+				input{
+					width: max-content;
+				}
+			}
+        }
+        .containerInfo{
+            width: 70%;
+        }
+    }
 }

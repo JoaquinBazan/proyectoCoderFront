@@ -48,6 +48,7 @@
 .mainIndex {
   background-color: white;
   display: grid;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-image: url("../assets/img/ambulancia-inicio.jpg");
@@ -60,8 +61,8 @@
 
 .fondoIndex {
   display: flex;
-  grid-column: 2/3;
-  grid-row: 1/3;
+  grid-column: 2/4;
+  grid-row: 1/2;
   align-items: center;
 }
 .fondoIndex h1 {
@@ -82,10 +83,13 @@
 }
 
 .cajaTraslados, .cajaEnfermeria, .cajaEventos {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   background-color: rgba(90, 207, 90, 0.544);
   width: 300px;
-  height: 200px;
+  height: auto;
   border: 1px solid black;
   overflow: auto;
   color: white;
@@ -102,39 +106,35 @@
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: ". . . titulo titulo . . ." ". texto texto texto img img img ." ". texto texto texto img img img ." ". texto texto texto img img img .";
   justify-content: center;
   align-content: center;
-  align-items: center;
   gap: 20px;
-  background-image: url("../assets/img/fondoNosotros.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .tituloNosotros {
-  background-color: rgb(70, 70, 222);
   display: flex;
-  grid-column: 2/4;
-  grid-row: 1/2;
   justify-content: center;
   align-content: center;
-  width: auto;
-  height: auto;
+  align-items: center;
   color: white;
+  grid-area: titulo;
+}
+.tituloNosotros h1 {
+  font-family: "Lato", sans-serif;
+  background-color: rgba(11, 11, 247, 0.692);
 }
 
 .textoNosotros {
   width: 100%;
   height: auto;
   display: flex;
-  grid-column: 2/4;
-  grid-row: 2/4;
   background-color: rgba(90, 207, 90, 0.544);
-  justify-items: center;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 10px 0;
+  grid-area: texto;
 }
 
 .imagenNosotros {
@@ -142,12 +142,9 @@
   background-image: url("../assets/img/imagen-nosotros.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 600px;
-  height: 400px;
-  grid-column: 5/8;
-  grid-row: 1/4;
-  justify-items: center;
-  align-items: center;
+  background-position: center;
+  grid-area: img;
+  margin: 10px;
 }
 
 .containerServicio {
@@ -216,7 +213,7 @@ h1 {
   height: 100%;
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(3, 300px);
-  grid-template-areas: "foto1 foto2 foto6" "foto3 foto2 foto6" "foto4 foto4 foto6";
+  grid-template-areas: "foto3 foto1 foto6" "foto2 foto1 foto6" "foto4 foto4 foto6";
   justify-content: center;
   align-content: center;
   gap: 20px 10px;
@@ -231,7 +228,7 @@ h1 {
 }
 
 .imag2 {
-  background-image: url("../assets/img/fotoGaleria1.jpg");
+  background-image: url("../assets/img/fotoGaleria2.jpg");
   grid-area: foto2;
 }
 
@@ -253,6 +250,51 @@ h1 {
 .imag6 {
   background-image: url("../assets/img/fotoGaleria6.jpg");
   grid-area: foto6;
+}
+
+.containerContacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.containerContacto .contenedorDatos {
+  display: flex;
+  width: 70%;
+  height: 500px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+.containerContacto .contenedorDatos .form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: rgba(90, 207, 90, 0.544);
+}
+.containerContacto .contenedorDatos .form label {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.containerContacto .contenedorDatos .form input {
+  width: 60%;
+}
+.containerContacto .containerInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(11, 11, 247, 0.692);
+  color: white;
+  width: 30%;
+  height: 300px;
+  margin: auto;
+  gap: 30px;
+}
+.containerContacto .containerInfo div {
+  display: flex;
+  margin: 5px;
 }
 
 .containerFooter {
@@ -310,10 +352,34 @@ h1 {
     grid-template-areas: "icono1 . navBar";
     height: 100%;
   }
+  .mainIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cajasIndex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    width: 40%;
+  }
+  .cajasIndex div {
+    width: auto;
+    height: auto;
+  }
   .containerNosotros {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     margin: 10px;
+  }
+  .containerNosotros .imagenNosotros {
+    width: 400px;
+    height: 400px;
   }
   .containerServicio {
     grid-template-columns: repeat(5, 1fr);
@@ -326,6 +392,7 @@ h1 {
   .containerServicio div {
     width: auto;
     height: auto;
+    margin: 5px;
   }
   .containerServicio .traslaServicio {
     grid-column: 1/3;
@@ -340,9 +407,24 @@ h1 {
     grid-row: 4/5;
   }
   .containerGaleria {
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(3, 300px);
     grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6";
+  }
+  .containerContacto {
+    flex-direction: column;
+  }
+  .containerContacto .contenedorDatos {
+    width: 70%;
+  }
+  .containerContacto .contenedorDatos form {
+    padding: 0;
+  }
+  .containerContacto .contenedorDatos form input {
+    width: max-content;
+  }
+  .containerContacto .containerInfo {
+    width: 70%;
   }
 }
 @media (max-width: 480px) {
@@ -368,22 +450,16 @@ h1 {
   .itemFooter2 {
     display: none;
   }
-  .mainIndex {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: none;
-    grid-template-rows: none;
-  }
   .fondoIndex {
     grid-row: auto;
     grid-column: auto;
   }
   .cajasIndex {
     flex-direction: column;
+    width: 80%;
   }
   .cajasIndex div {
-    width: auto;
-    height: auto;
+    margin: 0 5px;
   }
   .containerNosotros {
     display: flex;
@@ -414,6 +490,19 @@ h1 {
     grid-template-rows: repeat(6, 300px);
     grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
     margin-bottom: 20px;
+  }
+  .containerContacto {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+  .containerContacto .contenedorDatos {
+    width: 100%;
+    height: auto;
+  }
+  .containerContacto .containerInfo {
+    width: 100%;
+    height: auto;
   }
 }
 

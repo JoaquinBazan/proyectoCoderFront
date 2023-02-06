@@ -26,21 +26,15 @@
     .itemFooter2{
         display: none;
     }
-    .mainIndex{
-        display: flex;
-        flex-direction: column;
-        grid-template-columns: none;
-        grid-template-rows: none;
-    }
     .fondoIndex{
         grid-row: auto;
         grid-column: auto;
     }
     .cajasIndex{
         flex-direction: column;
+        width: 80%;
         div{
-            width: auto;
-            height: auto;
+            margin: 0 5px;
         }
     }
     .containerNosotros{
@@ -80,6 +74,18 @@
         ;
         margin-bottom: 20px;
     }
-
+    .containerContacto{
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        .contenedorDatos{
+            width: 100%;
+            height: auto;
+        }
+        .containerInfo{
+            width: 100%;
+            height: auto;
+        }
+    }
 
 }
